@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo sena.png" alt="Logo Sena">
+        <h1>Taller Adso 2024<span>WWW</span></h1>
+    </header>
+    <div class="navegacion-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="crearc.html">Crear Cuenta</a>
+
+        </nav>
+    </div>
+
+    <h2>Crear Cuenta</h2>
+    <form class="formulario" id="crear-cuenta-form">
+        <fieldset>
+            <legend>Complete los campos para crear su cuenta</legend>
+            <div class="contenedor_campos">
+                <div class="campo">
+                    <label>Nombre</label>
+                    <input class="input-text" type="text" placeholder="Digite su nombre completo" required>
+                </div>
+                <div class="campo">
+                    <label>Correo electrónico</label>
+                    <input class="input-text" type="email" placeholder="Escriba un correo válido" required>
+                </div>
+                <div class="campo">
+                    <label>Contraseña</label>
+                    <input class="input-text" type="password" placeholder="Cree una contraseña" required>
+                </div>
+                <div class="campo">
+                    <label>Confirmar Contraseña</label>
+                    <input class="input-text" type="password" placeholder="Confirme su contraseña" required>
+                </div>
+            </div>
+            <div class="enviar">
+                <input class="boton" type="submit" value="Crear Cuenta">
+            </div>
+        </fieldset>
+    </form>
+
+    <div id="mensaje-exito" style="display: none; text-align: center; margin-top: 20px;">
+        <h3>Su cuenta ha sido creada con éxito</h3>
+        <a href="iniciars.html" class="boton">Iniciar Sesión</a>
+    </div>
+ 
+    <script>
+        const form = document.getElementById('crear-cuenta-form');
+        const mensajeExito = document.getElementById('mensaje-exito');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+      
+
+         
+            form.style.display = 'none'; 
+            mensajeExito.style.display = 'block'; 
+        });
+    </script>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="index.html" class="boton">Volver a Inicio</a>
+    </div>
+</body>
+</html>

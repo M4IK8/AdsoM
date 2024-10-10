@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo sena.png" alt="Logo Sena">
+        <h1>Taller Adso 2024<span>WWW</span></h1>
+    </header>
+    <div class="navegacion-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </div>
+    <h2>Contacto</h2>
+    <form class="formulario">
+        <fieldset>
+            <legend>Contáctanos llenando todos los campos</legend>
+            <div class="contenedor_campos">
+                <div class="campo">
+                    <label>Nombre</label>
+                    <input class="input-text" type="text" placeholder="Digite su nombre completo" required>
+                </div>
+                <div class="campo">
+                    <label>Teléfono</label>
+                    <input class="input-text" type="tel" placeholder="Digite un número de teléfono" required>
+                </div>
+                <div class="campo">
+                    <label>Correo electrónico</label>
+                    <input class="input-text" type="email" placeholder="Escriba un correo válido" required>
+                </div>
+                <div class="campo">
+                    <label>Mensaje</label>
+                    <textarea class="input-text" required></textarea>
+                </div>
+            </div>
+            <div class="enviar">
+                <input class="boton" type="submit" value="Enviar">
+            </div>
+        </fieldset>
+    </form>
+
+    <script>
+        const textarea = document.querySelector('textarea');
+
+        textarea.addEventListener('focus', function() {
+            const content = textarea.value;
+
+            textarea.addEventListener('input', function() {
+                if (textarea.value === '') {
+                    textarea.value = content;
+                }
+            });
+        });
+    </script>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="index.html" class="boton">Volver a Inicio</a>
+    </div>
+    
+</body>
+</html>
